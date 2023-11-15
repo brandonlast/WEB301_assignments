@@ -1,79 +1,137 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</head>
+<body>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <form id="form1" action="" method="post">
+                    <label for="schoolName">School Name:</label>
+                    <input type="text" id="schoolName" name="schoolName" required>
+  
+                    <label for="joinDate">Join Date:</label>
+                    <input type="date" id="joinDate" name="joinDate" required>
+            
+                    
+                    <label for="graduated">Graduated?:</label>
+                    <label for="id">Yes</label>
+                    <input type="radio" id="yes" name="graduated" value="yes">
 
-    </head>
-    <body>
-      <h1 class="text-primary">Brandon Last</h1>
-
-
-      <div class="container">
-        <div class="row">
-            <div class="col bg-primary">
-                <h3>Scumpii</h3>
-                <p>
-                    Renowned for lightning-fast reflexes, Scump dominates with aggressive play.
-                </p>
+                    <label for="id">No</label>
+                    <input type="radio" id="no" name="graduated" value="no">
+            
+            
+                    <input type="submit" value="Submit">
+                </form>
             </div>
-            <div class="col bg-secondary">
-                <h3>Crimsix</h3>
-                <p>
-                    A strategic mastermind, Crimsix's leadership and gun skill make him a Call of Duty legend.
-                </p>
+
+            <div class="swiper-slide">
+                <form id="form2" action="" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required oninvalid="setCustomValidity('Please enter a valid email address.')"
+                        onchange="setCustomValidity('')">
+            
+                    <label for="number">Phone Number:</label>
+                    <input type="tel" id="number" name="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required oninvalid="setCustomValidity('Please enter a valid phone number (e.g., 123-456-7890).')"
+                        onchange="setCustomValidity('')">
+            
+                    <label for="zipCode">Zip Code: </label>
+                    <input type="text" id="zipCode" name="zipCode" pattern="[0-9]{5}" required oninvalid="setCustomValidity('Please enter a valid 5-digit zip code.')"
+                        onchange="setCustomValidity('')">
+            
+                    <input type="submit" value="Submit">
+                </form>
             </div>
-            <div class="col bg-danger">
-                <h3>Clayster</h3>
-                <p>
-                    Veteran with a keen tactical mind, Clayster excels in clutch moments and brings experience to any team.
-                </p>
+
+            <div class="swiper-slide">
+                <form id="form3" action="" method="post">
+                    <label for="cardNumber">Credit Card Number:</label>
+                    <input type="number" id="cardNumber" name="cardNumber" required>
+            
+            
+                    <label for="expDate">Expiration Date</label>
+                    <input type="text" id="expDate" name="expDate" placeholder="mm/yy" required>
+            
+                    <label for="cvv">CVV: </label>
+                    <input type="number" id="cvv" name="cvv" required>
+            
+            
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col bg-success">
-                <h3>Karma</h3>
-                <p>
-                    A four-time world champion, Karma's versatility and consistency set him apart in the Call of Duty scene.
-                </p>
-            </div>
-            <div class="col bg-warning">
-                <h3>Formal</h3>
-                <p>
-                    A deadly accurate sniper and versatile player, Formal's precision and adaptability contribute to his success.
-                </p>
-            </div>
-            <div class="col user-select-none bg-info">
-                <h3>Simp</h3>
-                <p>
-                    Rising star known for unmatched speed and skill, Simp's aggressive playstyle and clutch performances make him a force in competitive Call of Duty.
-                </p>
-            </div>
-        </div>
 
-        <div class="row mt-5">
-            <div class="col bg-light me-5">
-                <h3>Arcitys</h3>
-                <p>
-                    A four-time world champion, Karma's versatility and consistency set him apart in the Call of Duty scene.
-                </p>
-            </div>
-            <div class="col bg-secondary bg-gradient">
-                <h3>James Eubanks</h3>
-                <p>
-                    A deadly accurate sniper and versatile player, Formal's precision and adaptability contribute to his success.
-                </p>
-            </div>
-        </div>
-      </div>
-    </body>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>    
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+                navigation: {
+                    nextEl:".swiper-button-next",
+                    prevEl:".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+        });
+
+        function validateCreditCard() {
+            const constraints = {
+                cardNumber: {
+                    presence: true,
+                    format: {
+                        pattern: "[0-9]{10}",
+                        message: "must be a 10-digit number",
+                    },
+                },
+                expDate: {
+                    presence: true,
+                    format: {
+                        pattern: "(0[1-9]|1[0-2])\/[0-9]{2}",
+                        message: "must be in mm/yy format",
+                    },
+                },
+                cvv: {
+                    presence: true,
+                    format: {
+                        pattern: "[0-9]{3}",
+                        message: "must be a 3-digit number",
+                    },
+                },
+            };
+
+            const form = document.getElementById("form3");
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            const errors = validate(data, constraints);
+
+            if (errors) {
+                alert(Object.values(errors).flat().join('\n'));
+            } else {
+                form.submit();
+            }
+        }
+    </script>
+</body>
 </html>
